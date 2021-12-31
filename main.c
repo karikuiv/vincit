@@ -3,7 +3,7 @@
 
     Purpose: This software offers solutions to the Vincit Recruitment challenge of 2021.
     
-             It takes a crypto currency name and yyyy-mm-dd dates as arguments and GETs a json file from goingecko
+             It takes a crypto currency name and yyyy-mm-dd dates as arguments and GETs a json file from coingecko
              that contains price, trading volume and market cap data for the given date range in
              daily, hourly or 5 minute data periods depending on the date range.
              
