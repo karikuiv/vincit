@@ -26,7 +26,7 @@
     Running: ./moneymaker [coin] [date_begin] [date_end]
             e.g. ./moneymaker monero 2021-01-01 2021-06-30
 
-    Copyright: main.c/.h and timedate.c/.h are released to the public domain in so far as they can be
+    Copyright: main.c and timedate.c/.h are released to the public domain in so far as they can be
                Adapted maybe a dozen lines from a curl library sample code (MIT license?)
                Using the json library (BSD license)
                
