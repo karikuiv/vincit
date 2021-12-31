@@ -1,0 +1,1 @@
+rm moneymaker; gcc -Wall -lm -lcurl timedate.c curl_helpers.c json.c main.c -o moneymaker
