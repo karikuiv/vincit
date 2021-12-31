@@ -512,7 +512,7 @@ int main (int argc, char *argv[]) {
         
         /* get unix timestamps and add 1 hour to end time to make sure the last day's data is included */
         data.begin_timestamp = get_timestamp(&(data.date_begin));
-        data.end_timestamp = get_timestamp(&(data.date_end)) + 6 * (60*60);
+        data.end_timestamp = get_timestamp(&(data.date_end)) + (60*60);
     
         data.num_entries = days_between(&(data.date_begin), &(data.date_end));
         
