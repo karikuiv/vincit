@@ -521,9 +521,25 @@ int main (int argc, char *argv[]) {
         printf("days: %d\n", data.num_entries);
 
         data.timestamp = malloc(sizeof(int64_t) * data.num_entries);
+        if (data.timestamp == NULL) {
+            printf("error: malloc data.timestamp\n");
+            return 1;
+        }
         data.price = malloc(sizeof(double) * data.num_entries);
+        if (data.price == NULL) {
+            printf("error: malloc data.price\n");
+            return 1;
+        }
         data.volume = malloc(sizeof(double) * data.num_entries);
+        if (data.volume == NULL) {
+            printf("error: malloc data.volume\n");
+            return 1;
+        }
         data.market_cap = malloc(sizeof(double) * data.num_entries);
+        if (data.market_cap == NULL) {
+            printf("error: malloc data.market_cap\n");
+            return 1;
+        }
     
         /* optional fourth argument is the amount of money to use for exercise C. defaults to something */
         if (argc == 5) {
