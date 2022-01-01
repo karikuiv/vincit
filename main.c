@@ -472,16 +472,6 @@ int main (int argc, char *argv[]) {
     struct MemoryStruct chunk;
     char *req;
 
-    /*
-     * TODO: fix this because while it technically works for bitcoin and monero
-     * it doesn't for coins with longer names
-     */
-    req = malloc(sizeof(char) * 111);
-    if (req == NULL) {
-        printf("error: malloc req\n");
-        return -1;
-    }
-    
 #if DEBUG   
     for (uint8_t arg = 0; arg < argc; arg++) {
         printf("%s ", argv[arg]);
@@ -556,6 +546,12 @@ int main (int argc, char *argv[]) {
     }
     
     /* Get json file */
+    req = malloc(sizeof(char) * (104 + strlen(argv[1])));
+    if (req == NULL) {
+        printf("error: malloc req\n");
+        return -1;
+    }    
+    
     sprintf(req, "https://api.coingecko.com/api/v3/coins/%s/market_chart/range?vs_currency=eur&from=%" PRIu64 "&to=%" PRIu64, 
                             argv[1], data.begin_timestamp, data.end_timestamp);
 
