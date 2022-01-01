@@ -472,6 +472,10 @@ int main (int argc, char *argv[]) {
     struct MemoryStruct chunk;
     char *req;
 
+    /*
+     * TODO: fix this because while it technically works for bitcoin and monero
+     * it doesn't for coins with longer names
+     */
     req = malloc(sizeof(char) * 111);
     if (req == NULL) {
         printf("error: malloc req\n");
